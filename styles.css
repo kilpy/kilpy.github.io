@@ -89,7 +89,7 @@ color:black !important;
 }
 
 .logo-wrapper img{
-    width: 50%;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -125,7 +125,7 @@ color:black !important;
 }
 
 .profile-content-wrapper h1{
-    color:red;
+    color:black;
 }
 
 .link-spanner{
