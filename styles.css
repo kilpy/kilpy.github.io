@@ -141,4 +141,12 @@ color:black !important;
 .img-badge{
     width:50%;
     height:50%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
 }
