@@ -139,8 +139,8 @@ color:black !important;
 }
 
 .img-badge{
-    width:50%;
-    height:50%;
+    width:30%;
+    height:30%;
     position: absolute;
     display: flex;
 }
