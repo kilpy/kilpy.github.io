@@ -137,3 +137,8 @@ color:black !important;
     z-index: 1;
     
 }
+
+.img-badge{
+    width:50%;
+    height:50%;
+}
