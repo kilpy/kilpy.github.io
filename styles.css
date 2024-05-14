@@ -3,7 +3,7 @@
 body {
     font-family: "Libre Franklin", sans-serif;
     margin: 0px;
-    background-color: rgb(204, 200, 200);
+    background-color: #dbd8e3;
 }
 
 .container{
@@ -29,13 +29,14 @@ body {
 }
 
 .nav-link-wrapper{
+    color: black;
     height: 22px;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.4s;
 }
 
 .nav-link-wrapper a{
-    color: #8a8a8a;
+    color: black;
     text-decoration: none;
     transition: color 0.4s;
 }
@@ -126,6 +127,11 @@ color:black !important;
 
 .profile-content-wrapper h1{
     color:black;
+}
+
+.profile-content-wrapper p{
+    color:black;
+    font-weight: 600;
 }
 
 .link-spanner{
