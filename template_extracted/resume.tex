@@ -1,0 +1,70 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+%====================
+% OFFICIAL PUBLIC OVERLEAF TEMPLATE
+% https://www.overleaf.com/latex/templates/data-science-tech-resume-template/zcdmpfxrzjhv
+% 
+%====================
+%
+% Resume template for data scientists, a complement to data-science-tech-cover-letter-template:
+% https://www.overleaf.com/latex/templates/data-science-tech-cover-letter-template/gbrcqktbsfxf
+%
+% Files:        resume.tex: Main file
+%               _header.tex: header code
+%               TLCresume.sty: style file containing formatting details
+%               section/objective: https://www.indeed.com/career-advice/resumes-cover-letters/resume-objective-examples
+%               section/skills: table of skills
+%               section/experience: projects or roles
+%               section/education: schools and stuff
+%               section/activities: optional, could comment out in resume.tex.
+%
+% Editor:       https://github.com/TimmyChan 
+%               https://www.linkedin.com/in/timmy-l-chan/
+%               
+% Last Updated: March 24th, 2022
+%
+%====================
+
+
+\usepackage{TLCresume}
+
+\usepackage{enumitem}
+\setlist[itemize]{partopsep=0pt}
+%====================
+% CONTACT INFORMATION
+%====================
+\def\name{Brent Garey} % Name Here
+\def\phone{(978) 701-5609}
+\def\city{Methuen, MA}
+\def\email{b.elbridgegarey@gmail.com}
+\def\LinkedIn{brent-base-uncased/} % linkedin.com/in/______
+\def\github{kilpy} % github username
+\def\role{Machine Learning Intern} % JOB TITLE
+
+\input{_header}
+\begin{document}
+\input{sections/objective}
+
+\section{Skills}
+\input{sections/skills}
+
+\section{Education}
+\input{sections/education}
+
+\section{Prior Roles}
+\input{sections/work}
+
+\section{Technical Experience}
+\input{sections/projects}
+
+
+
+% make a newpage wherever it is a clean break
+% \newpage
+
+% \section{Activities}
+% \input{sections/activities}
+
+
+\end{document}

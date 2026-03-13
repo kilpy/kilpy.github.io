@@ -1,262 +1,538 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-    <meta charset="utf-8"\>
-    <title>Page Title</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brent Garey | AI & ML Engineer</title>
+    <!-- Dark Academia Theme Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
- <!--Create a container class for our entire application-->
- <div class ="container">
-    <div class="nav-wrapper">
-        <!--Two links, followed by a header for my name-->
-        <div class="left-side">
-            <div class="nav-link-wrapper active-nav-link">
-                <!-- "a tag" is how you define a hyperlink, href is where the link points to-->
-                <b><a href="index.html">Home</a></b>
-            </div>
-            <div class="nav-link-wrapper">
-                <b><a href="about.html">About Me</a></b>
-            </div>
-        </div>
-        
-        <div class="right-side">
-            <div class="brand">
-                <div>Brent Garey</div>
-            </div>
-        </div>
+    <!-- Dynamic Cursor Glow -->
+    <div id="cursor-glow"></div>
 
+    <!-- Navigation Header -->
+    <header>
+        <div class="nav-content">
+            <a href="index.html" class="nav-brand">Brent Garey.</a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Architecture</a>
+                <a href="gamer.html" class="nav-link">Games</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-container">
+
+        <!-- ================= HERO SECTION ================= -->
+        <section id="hero" class="section-hero">
+            <div class="hero-content">
+                <p class="mono-text" id="tw-init" style="min-height: 1.5em;"></p>
+                <h1 class="hero-title" style="min-height: 1.25em;"><span id="tw-title-1"></span><span id="tw-title-2"
+                        class="text-gold"></span></h1>
+                <p class="hero-subtitle" id="tw-subtitle" style="min-height: 5em; margin-bottom: 1rem;"></p>
+                <div class="hero-actions" id="hero-actions"
+                    style="opacity: 0; transform: translateY(10px); transition: opacity 1s ease, transform 1s ease;">
+                    <a href="#projects" class="btn btn-primary">Projects</a>
+                    <a href="Resume_Brent_Garey.pdf" target="_blank" class="btn btn-outline">Resume</a>
+                    <a href="gamer.html" class="btn btn-outline">Games</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <!-- Abstract Academic/Hacker visual will go here -->
+                <div class="abstract-sphere"></div>
+            </div>
+        </section>
+
+        <!-- ================= PROJECTS GRID ================= -->
+        <section id="projects" class="section-projects">
+            <div class="section-heading">
+                <span class="mono-text">01. Applied Architectures</span>
+                <h2>Selected Research & Models</h2>
+            </div>
+
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <article class="glass-card project-card" style="cursor: pointer;"
+                    onclick="openModal('cfd-surrogate-modal')">
+                    <div class="project-content">
+                        <span class="mono-text text-gold">Deep Learning | Transformers</span>
+                        <h3>Computational Fluid Dynamics Surrogate</h3>
+                        <p>
+                            A physics-informed transformer model accelerating CFD simulations on turbulent fluid flow.
+                            Features a custom positional encoding (ReyPR) integrating the fluid's Reynold's Number
+                            directly.
+                        </p>
+                        <div class="project-links">
+                            <span class="github-link" style="margin-right: 15px;">Click to expand details</span>
+                            <a href="https://github.com/kilpy/CS-7150-Final" target="_blank" class="github-link"
+                                onclick="event.stopPropagation();">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="glass-card project-card" style="cursor: pointer;"
+                    onclick="openModal('nlp-emotions-modal')">
+                    <div class="project-content">
+                        <span class="mono-text text-gold">NLP | Interpretable AI</span>
+                        <h3>Emotion Classification in Text</h3>
+                        <p>
+                            Fine-tuned BERT backbone for a highly-interpretable Tri-Tower Transformer.
+                            Leverages LLM synthetic datasets and BIO-tagging to pinpoint exactly which words triggered
+                            specific emotion classifications.
+                        </p>
+                        <div class="project-links">
+                            <span class="github-link" style="margin-right: 15px;">Click to interact</span>
+                            <a href="https://github.com/kilpy/nlp_project" target="_blank" class="github-link"
+                                onclick="event.stopPropagation();">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="glass-card project-card" style="cursor: pointer;"
+                    onclick="openModal('genetic-combat-modal')">
+                    <div class="project-content">
+                        <span class="mono-text text-gold">Reinforcement Learning</span>
+                        <h3>Multi-Agent Genetic Algorithm Env</h3>
+                        <p>
+                            Custom robust multi-agent environment tracking agent decision weights and stats modeling
+                            Natural Selection. Agents dynamically evolve resource-gathering strategies versus combat
+                            efficiency.
+                        </p>
+                        <div class="project-links">
+                            <span class="github-link" style="margin-right: 15px;">Click to expand details</span>
+                            <a href="https://github.com/kilpy/Genetic-Alg-Combat-Sim" target="_blank"
+                                class="github-link" onclick="event.stopPropagation();">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="glass-card project-card" style="cursor: pointer;" onclick="openModal('spotabnb-modal')">
+                    <div class="project-content">
+                        <span class="mono-text text-gold">Machine Learning | XGBoost</span>
+                        <h3>SpotAbnb Recommendation System</h3>
+                        <p>
+                            Personalized travel planner cross-referencing user Spotify data with Ticketmaster and Airbnb
+                            APIs.
+                            Utilizes XGBoost with a custom distance-weighted loss function and KMeans clustering to
+                            filter optimal lodgings.
+                        </p>
+                        <div class="project-links">
+                            <span class="github-link" style="margin-right: 15px;">Click to expand details</span>
+                            <a href="https://github.com/kilpy/SpotAbnb" target="_blank" class="github-link"
+                                onclick="event.stopPropagation();">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="glass-card project-card">
+                    <div class="project-content">
+                        <span class="mono-text text-gold">Generative AI | CycleGAN</span>
+                        <h3>Music Genre Context Transfer</h3>
+                        <p>
+                            Leveraged CycleGAN and ResNet to translate music across genres while preserving core melodic
+                            identity, focusing on high-level feature skipping for robust generation.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/kilpy/CS7150-Music-Style-Transfer" target="_blank"
+                                class="github-link">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+
+        <!-- ================= ABOUT & SKILLS SECTION ================= -->
+        <section id="skills" class="section-skills">
+            <div class="section-heading">
+                <span class="mono-text">02. Background</span>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Education Card -->
+                <div class="glass-card education-card">
+                    <h3>Education</h3>
+                    <div class="edu-item">
+                        <span class="mono-text text-gold">Dec 2026</span>
+                        <h4>Master of Science, Artificial Intelligence</h4>
+                        <p>Northeastern University, Khoury College of Computer Sciences</p>
+                        <p class="subtext">Concentration: Machine Learning </p>
+                        <p class="subtext">Current Teaching Assistant under <a
+                                href="https://rajagopalvenkat.com/teaching/AI/index.html" target="_blank"
+                                style="color: var(--accent-gold); text-decoration: underline;">Professor Raj Venkat
+                                (CS4100: AI)</a>
+                        </p>
+                    </div>
+                    <div class="edu-item">
+                        <span class="mono-text text-gold"></span>
+                        <h4>Bachelor of Science, Computer Science</h4>
+                        <p>University of Massachusetts Lowell</p>
+                    </div>
+                </div>
+
+                <!-- Tech Stack Card -->
+                <div class="glass-card tech-card">
+                    <h3>Technical Arsenal</h3>
+                    <div class="tech-group">
+                        <span class="mono-text">Languages</span>
+                        <div class="tech-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">C/C++</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <span class="mono-text">Libraries & Frameworks</span>
+                        <div class="tech-tags">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">HuggingFace</span>
+                            <span class="tag">LangChain</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">NumPy</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <span class="mono-text">Specializations</span>
+                        <p class="specialization-text">
+                            Deep Learning, NLP, Transformers, Multi-Agent RL, Recommendation Systems, RAG Architectures.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Overlays -->
+    <div id="genetic-combat-modal" class="project-modal-overlay" onclick="closeModal(event, 'genetic-combat-modal')">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <button class="modal-close-btn" onclick="closeModal(event, 'genetic-combat-modal')">&times;</button>
+            <span class="mono-text text-gold" style="margin-bottom: 0.5rem; display: block;">Deep Dive</span>
+            <h2 style="margin-bottom: 2rem;">Multi-Agent Genetic Algorithm Combat Sim</h2>
+
+            <div class="modal-body">
+                <p>
+                    This project explores emergent behavior in a custom multi-agent environment using genetic
+                    algorithms.
+                    Agents are governed by neural networks that dictate their movement, attack decisions, and resource
+                    gathering.
+                    Through natural selection, the population organically discovers optimal balances between finding
+                    food to survive and engaging in combat to eliminate competition.
+                </p>
+
+                <div class="modal-media-grid">
+                    <div class="media-item video-container">
+                        <video autoplay loop muted playsinline>
+                            <source src="images/genetic_combat/Final_Battle.mp4" type="video/mp4">
+                        </video>
+                        <p class="media-caption">Final evolved population demonstrating complex combat and evasion
+                            strategies.</p>
+                    </div>
+                </div>
+
+                <div class="modal-media-grid two-cols" style="margin-top: 2rem;">
+                    <div class="media-item">
+                        <img src="images/genetic_combat/genetic_algo_vis.gif" alt="Algorithm visualization 1">
+                        <p class="media-caption">Early generation baseline behaviors.</p>
+                    </div>
+                    <div class="media-item">
+                        <img src="images/genetic_combat/genetic_algo_vis2.gif" alt="Algorithm visualization 2">
+                        <p class="media-caption">Emergent grouping and targeted attacks after 100+ generations.</p>
+                    </div>
+                </div>
+
+                <div class="modal-text-section" style="margin-top: 2rem;">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">Evolutionary Mechanics</h3>
+                    <p>
+                        The fitness function heavily prioritizes survival time, but also rewards agents for dealing
+                        damage.
+                        This dual-reward system prevents static behaviors where agents just run away.
+                        We observe clear evolutionary epochs where different strategies dominate, including "gatherers"
+                        who prioritize food, and "predators" who hunt other agents.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="content-wrapper">
-        <div class="portfolio-items-wrapper">
-            <!--Do this x amount of times for each project-->
+    <div id="cfd-surrogate-modal" class="project-modal-overlay" onclick="closeModal(event, 'cfd-surrogate-modal')">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <button class="modal-close-btn" onclick="closeModal(event, 'cfd-surrogate-modal')">&times;</button>
+            <span class="mono-text text-gold" style="margin-bottom: 0.5rem; display: block;">Technical
+                Architecture</span>
+            <h2 style="margin-bottom: 2rem;">Computational Fluid Dynamics Surrogate Transformer</h2>
 
-            <div class="portfolio-item-wrapper">
+            <div class="modal-body">
+                <p>
+                    Solving the Navier-Stokes equations for Computational Fluid Dynamics (CFD) using traditional mesh
+                    generation is notoriously computationally expensive, scaling extremely poorly with required
+                    resolution. This project introduces a Transformer-based surrogate model designed for next-frame and
+                    autoregressive forecasting of turbulent fluid properties (velocities u, v and pressure p) using
+                    multivariate regression in drastically lower dimensional representations.
+                </p>
 
-                <div class="portfolio-img-background" style="background-image:url(images/DR.png)">
-
+                <div class="modal-media-grid" style="margin-bottom: 2rem;">
+                    <div class="media-item video-container"
+                        style="max-height: 80vh; display: flex; flex-direction: column; background: #000;">
+                        <video autoplay loop muted playsinline
+                            style="width: 100%; max-height: 70vh; object-fit: contain;">
+                            <source src="images/cfd_surrogate/CFD_Simulation.mp4" type="video/mp4">
+                        </video>
+                        <p class="media-caption">Autoregressive deployment: Autoregressive fluid density and velocity
+                            heatmaps rendering over an internal cylinder structure.</p>
+                    </div>
                 </div>
 
-                <div class="img-text-wrapper">
-                    <div class="logo-wrapper">
-                        <img src="images/logos/Python-Symbol.png">
-                    </div>
-
-                    <div class="subtitle">
-                        Severity of Diabetic Retinopathy in Eye Images via Ensemble Based Neural Networks
-                    </div>
-
-                    <a href="https://github.com/lykelly19/Computing-for-Health-and-Medicine-Final/blob/main/DR%20Detection%20Group%209.ipynb">
-                        <span class="link-spanner"></span>    
-                    </a>
+                <div class="modal-text-section"
+                    style="margin-top: 2rem; border-top: 1px solid var(--border-subtle); padding-top: 2rem;">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">Architectural Highlights (Author Notes)</h3>
+                    <ul style="margin-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
+                        <li><strong>Positional Encoding Intervention:</strong> Expand on why standard APE/ALiBi failed
+                            physically, and detail your Reynolds-Positional-Representation (ReyPR) architecture.</li>
+                        <li><strong>Parameter Efficiency:</strong> Discuss how projecting out of the decoder space
+                            triggered a parameter explosion (7.8M parameters), and how you mitigated this using a
+                            Low-Rank Approximation (LRA) bottleneck rather than lossy mean-pooling.</li>
+                        <li><strong>Performance Metrics:</strong> Highlight the Pareto-Optimality of the model,
+                            specifically how it balanced Mean Squared Error against variance stability over baselines.
+                        </li>
+                        <li><strong>Physics-Informed Bounds:</strong> Add a note on the custom loss function and how it
+                            forced the network to respect fluid flow mechanics (Navier-Stokes).</li>
+                    </ul>
                 </div>
 
-            </div>
-
-            <div class="portfolio-item-wrapper">
-
-                <div class="portfolio-img-background" style="background-image:url(images/skins.png)">
-
-                </div>
-
-                <div class="img-text-wrapper">
-                    <div class="logo-wrapper">
-                        <img src="images/logos/Python-Symbol.png">
+                <div class="modal-media-grid two-cols" style="align-items: center; margin-top: 2rem;">
+                    <div class="media-item video-container">
+                        <video autoplay loop muted playsinline>
+                            <source src="images/cfd_surrogate/Secondary_Heatmap.mp4" type="video/mp4">
+                        </video>
+                        <p class="media-caption">Secondary velocity state simulations.</p>
                     </div>
-
-                    <div class="subtitle">
-                        Skin Lesion Classification via Neural Network
+                    <div class="media-item">
+                        <img src="images/cfd_surrogate/Slides_Visual_1.png" alt="CFD Slide Data">
+                        <p class="media-caption">Extracted directly from the slide deck data presentations.</p>
                     </div>
-
-                    <a href="https://github.com/kilpy/Machine-Learning/blob/main/Skin%20Lesion%20Classification/Skin%20Lesion%20Classification-Copy1-checkpoint.ipynb">
-                        <span class="link-spanner"></span>    
-                    </a>
-    
-                </div>
-
-            </div>
-
-            <div class="portfolio-item-wrapper">
-
-
-                <div class="portfolio-img-background" style="background-image:url(images/KSG.jpg)">
-                </div>
-
-                <div class="img-text-wrapper">
-                    <div class="logo-wrapper">
-                        <img src="images/logos/c-logo.png">
-                    </div>
-
-                    <div class="subtitle">
-                        Virtual Instrument Simulator
-                    </div>
-                    <a href="https://github.com/kilpy/CPlusPlus/tree/gh-pages/KSGuitarSimulator">
-                        <span class="link-spanner"></span>    
-                    </a>
                 </div>
 
             </div>
-            
-            <div class="portfolio-item-wrapper">
-
-                <div class="portfolio-img-background" style="background-image:url(images/mmodel.png)">
-
-                </div>
-
-                <div class="img-text-wrapper">
-                    <div class="logo-wrapper">
-                        <img src="images/logos/c-logo.png">
-                    </div>
-
-                    <div class="subtitle">
-                        Markov Model of Language
-                    </div>
-                    <a href="https://github.com/kilpy/CPlusPlus/tree/gh-pages/MModel">
-                        <span class="link-spanner"></span>    
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="portfolio-item-wrapper">
-
-                <div class="portfolio-img-background" style="background-image:url(images/buildingheatmap.jpg)">
-
-                </div>
-
-                <div class="img-text-wrapper">
-                    <div class="logo-wrapper">
-                        <img src="images/logos/Python-Symbol.png">
-                    </div>
-
-                    <div class="subtitle">
-                        Building Energy Efficiency
-                    </div>
-
-                    <a href="https://github.com/kilpy/Machine-Learning/blob/main/BuildingEnergyEfficiency/BuildingEnergyEfficiency.ipynb">
-                        <span class="link-spanner"></span>    
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="portfolio-item-wrapper">
-
-                <div class="portfolio-img-background" style="background-image:url(images/universe.jpg)">
-
-                </div>
-
-                <div class="img-text-wrapper">
-                    <div class="logo-wrapper">
-                        <img src="images/logos/c-logo.png">
-                    </div>
-
-                    <div class="subtitle">
-                        Universe Physics Simulation
-                    </div>
-                    <a href="https://github.com/kilpy/CPlusPlus/tree/gh-pages/UniversePhysicsSim">
-                        <span class="link-spanner"></span>    
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="portfolio-item-wrapper">
-
-                <div class="portfolio-img-background" style="background-image:url(images/kronos.jpg)">
-
-                </div>
-
-                <div class="img-text-wrapper">
-                    <div class="logo-wrapper">
-                        <img src="images/logos/c-logo.png">
-                    </div>
-
-                    <div class="subtitle">
-                        Script for Kronos Server Runtime
-                    </div>
-                    <a href="https://github.com/kilpy/CPlusPlus/tree/gh-pages/KronosServerRuntime">
-                        <span class="link-spanner"></span>    
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="portfolio-item-wrapper">
-
-                <div class="portfolio-img-background" style="background-image:url(images/bookstore.jpg)">
-
-                </div>
-
-                <div class="img-text-wrapper">
-                    <div class="logo-wrapper">
-                        <img src="images/logos/Sql_data_base_with_logo.png">
-                    </div>
-
-                    <div class="subtitle">
-                        Online Bookstore (Relational Database)
-                    </div>
-
-                    <a href="https://github.com/Marora44/Bookstore">
-                        <span class="link-spanner"></span>    
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="portfolio-item-wrapper">
-
-                <div class="portfolio-img-background" style="background-image:url(images/creditcardfraud.jpg)">
-
-                </div>
-
-                <div class="img-text-wrapper">
-                    <div class="logo-wrapper">
-                        <img src="images/logos/Python-Symbol.png">
-                    </div>
-
-                    <div class="subtitle">
-                        Credit Card Fraud Detection
-                    </div>
-
-                    <a href="https://github.com/kilpy/Machine-Learning/blob/main/CreditCardFraud/CreditCardFraud.ipynb">
-                        <span class="link-spanner"></span>    
-                    </a>
-
-                </div>
-
-            </div>
-
-            
         </div>
     </div>
 
-</div>
+    <div id="nlp-emotions-modal" class="project-modal-overlay" onclick="closeModal(event, 'nlp-emotions-modal')">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <button class="modal-close-btn" onclick="closeModal(event, 'nlp-emotions-modal')">&times;</button>
+            <span class="mono-text text-gold" style="margin-bottom: 0.5rem; display: block;">Interactive Demo</span>
+            <h2 style="margin-bottom: 1rem;">Emotion Classification Tri-Tower Transformer</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Hover, drag, and interact with the Latent
+                Space UMAP below to explore how the Tri-Tower model geometrically clusters the GoEmotions label
+                dimensions.</p>
 
+            <div class="modal-body">
+                <div class="modal-media-grid" style="margin-bottom: 2rem;">
+                    <div class="media-item iframe-container"
+                        style="height: 60vh; width: 100%; border-radius: var(--border-radius); overflow: hidden; background: #fff;">
+                        <iframe src="images/nlp_emotions/tri_tower_model_umap_with_neutral_plotly.html" width="100%"
+                            height="100%" style="border: none;"></iframe>
+                    </div>
+                </div>
+
+                <div class="modal-text-section"
+                    style="margin-top: 2rem; border-top: 1px solid var(--border-subtle); padding-top: 2rem;">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">Architectural Highlights (Author Notes)</h3>
+                    <ul style="margin-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
+                        <li><strong>The Tri-Tower Cognitive Pipeline:</strong> Detail how the model mimics human
+                            pragmatic inference by splitting into three modules: a Span-Level Lexical Tower, a Global
+                            Context Tower, and a Dictionary Definition Tower using contrastive loss.</li>
+                        <li><strong>Failure of Baselines on Pragmatics:</strong> Note how standard CNN/BERT models fail
+                            on sarcasm/irony. (e.g., 63% of ground-truth emotion examples were wrongly predicted as
+                            "None" by CNN baselines due to strict sequence matching).</li>
+                        <li><strong>LLM Dataset Augmentation:</strong> Highlight the use of LLMs to generate span-level
+                            BIO tags isolating explicit tokens (e.g., "OMG"), allowing the custom transformer to ground
+                            emotional labels to precise lexical cues instead of entire vague sentences.</li>
+                        <li><strong>Explainability & Precision:</strong> Emphasize how this approach moves beyond
+                            Black-Box BERT performance (which only outputs a final label) to highly-interpretable
+                            span-based predictions mapping directly to dictionary definitions.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="spotabnb-modal" class="project-modal-overlay" onclick="closeModal(event, 'spotabnb-modal')">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <button class="modal-close-btn" onclick="closeModal(event, 'spotabnb-modal')">&times;</button>
+            <span class="mono-text text-gold" style="margin-bottom: 0.5rem; display: block;">System Architecture</span>
+            <h2 style="margin-bottom: 2rem;">SpotAbnb Data Pipeline</h2>
+
+            <div class="modal-body">
+                <p>
+                    SpotAbnb is a context-aware itinerary generator designed to merge a user's musical identity with
+                    travel logistics.
+                    Rather than building a standard property search, this system cross-references listening history with
+                    live concert availability,
+                    and subsequently scores nearby lodging options based on distance to the venue and overall property
+                    rating.
+                </p>
+
+                <div class="modal-media-grid" style="margin-bottom: 2rem;">
+                    <div class="media-item">
+                        <img src="images/spotabnb/spotabnb_architecture.png"
+                            alt="SpotAbnb System Architecture Data Pipeline">
+                        <p class="media-caption">End-to-end data flow: Extracting taste profiles, fetching live events,
+                            clustering lodging, and future computer vision pipelines.</p>
+                    </div>
+                </div>
+
+                <div class="modal-text-section" style="margin-top: 2rem;">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">Feature Engineering & Clustering</h3>
+                    <p>
+                        The core engine relies on an XGBoost model optimized via an custom distance-weighted loss
+                        function.
+                        By penalizing properties that are a far radius from the Ticketmaster event coordinates, the
+                        model learns to heavily favor walkability.
+                        KMeans clustering is employed as a preprocessing step to group the Airbnb listings
+                        geographically before the gradient boosting regressor ranks the clusters by density and quality.
+                    </p>
+                </div>
+
+                <div class="modal-text-section"
+                    style="margin-top: 2rem; border-top: 1px solid var(--border-subtle); padding-top: 2rem;">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.4rem;" class="text-gold">Future Work: Visual Vibe
+                        Extraction (Dino v3)</h3>
+                    <p>
+                        Current property scores rely on textual reviews and standard API features (price, beds, star
+                        rating).
+                        However, text reviews often fail to capture the <em>aesthetic feel</em> of a spaceâ€”which is
+                        crucial when pairing it with a specific music genre (e.g., booking an industrial loft for an
+                        underground techno show, vs. a cozy cabin for an indie folk concert).
+                    </p>
+                    <p>
+                        <strong>Next Phase:</strong> Integrate Meta's <span class="mono-text">DinoV3</span> vision
+                        transformer.
+                        By scraping Airbnb listing photos and generating dense, frozen feature embeddings via Dino v3,
+                        the system will learn to cluster properties purely on visual aesthetics without needing manual
+                        labels.
+                        These visual "vibe embeddings" will then become high-impact features within the XGBoost
+                        pipeline, allowing the model to recommend lodgings that visually match the auditory aesthetic of
+                        the user's Spotify profile.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="app-container footer-content">
+            <p class="mono-text">b.elbridgegarey@gmail.com</p>
+            <p class="mono-text">&copy; 2026 Brent Garey. Built with intent.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Modal functions
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+        }
+
+        function closeModal(event, modalId) {
+            // Only close if clicking the background or close button, not the content
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Restore background scrolling
+            }
+        }
+
+        const cursorGlow = document.getElementById('cursor-glow');
+
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+
+            // Move the glow to follow the cursor exactly
+            cursorGlow.style.left = `${x}px`;
+            cursorGlow.style.top = `${y}px`;
+        });
+
+        // --- Typewriter Effect ---
+        async function typeText(element, text, speed = 30) {
+            element.innerHTML = '';
+            const cursor = document.createElement('span');
+            cursor.className = 'tw-cursor';
+            element.appendChild(cursor);
+
+            for (let i = 0; i < text.length; i++) {
+                if (text.charAt(i) === '|') {
+                    // Stutter explicit pause
+                    await new Promise(r => setTimeout(r, 650));
+                    continue;
+                }
+                if (text.charAt(i) === '\n') {
+                    const br = document.createElement('br');
+                    element.insertBefore(br, cursor);
+                } else {
+                    const charNode = document.createTextNode(text.charAt(i));
+                    element.insertBefore(charNode, cursor);
+                }
+                // slight randomness for realistic typing, reduced for a smoother feel
+                await new Promise(r => setTimeout(r, speed + Math.random() * 10));
+            }
+            element.removeChild(cursor);
+        }
+
+        async function runTypewriter() {
+            const initEl = document.getElementById('tw-init');
+            const title1El = document.getElementById('tw-title-1');
+            const title2El = document.getElementById('tw-title-2');
+            const subtitleEl = document.getElementById('tw-subtitle');
+            const actionsEl = document.getElementById('hero-actions');
+
+            await typeText(initEl, "hi!| i'm brent", 26);
+            await new Promise(r => setTimeout(r, 100));
+
+            await typeText(title1El, "this is ", 35);
+            await typeText(title2El, " me", 60);
+
+            // Ensure visual pause after title is done typing
+            const titleCursor = document.createElement('span');
+            titleCursor.className = 'tw-cursor';
+            title2El.appendChild(titleCursor);
+            await new Promise(r => setTimeout(r, 400));
+            title2El.removeChild(titleCursor);
+
+            const subtitleText = "I'm currently pursuing a Master's in Artificial Intelligence at Northeastern University.\n\nI'm passionate about eSports, EDM, RecSys, and creating interpretable or compute-efficient systems.";
+            await typeText(subtitleEl, subtitleText, 25);
+
+            // Add persistent cursor at the end of subtitle
+            const finalCursor = document.createElement('span');
+            finalCursor.className = 'tw-cursor';
+            subtitleEl.appendChild(finalCursor);
+
+            await new Promise(r => setTimeout(r, 200));
+
+            actionsEl.style.opacity = '1';
+            actionsEl.style.transform = 'translateY(0)';
+        }
+
+        window.addEventListener('DOMContentLoaded', runTypewriter);
+    </script>
 </body>
-<script>
-    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
-
-    portfolioItems.forEach(portfolioItem => {
-        portfolioItem.addEventListener('mouseover', () => {
-            portfolioItem.childNodes[1].classList.add('img-darken');
-        })
-
-        portfolioItem.addEventListener('mouseout', () => {
-            portfolioItem.childNodes[1].classList.remove('img-darken');
-        })
-    })
-</script>
 
 </html>
-
-

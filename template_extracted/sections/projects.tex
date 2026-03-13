@@ -1,0 +1,86 @@
+%====================
+% EXPERIENCE A
+%====================
+
+
+\subsection{{Deep Learning: Computational Fluid Dynamics Surrogate}}
+\subtext {Python: PyTorch, MLP Baseline, Transformers, MLA Attention, Positional Encoding}
+\begin{zitemize}
+\item Developed a physics-informed transformer-based surrogate model to accelerate computationally expensive CFD simulations on turbulent fluid flow prediction, integrating the Navier-Stokes equations into the loss function to enhance outputs.
+\item Using encoded sequential flow field frames from the Cylinder Flow dataset, structured encoder-only and decoder-only transformer models for next frame regression and multi-frame regression respectively.
+\item Implemented a custom positional encoding method, ReyPR, infusing the fluid’s Reynold’s Number to the model. Proven next frame regression via PE ablation study. 
+\end{zitemize}
+
+
+\subsection{{Recommendation System: Personal Travel planner}}
+\subtext{Python: Google Maps, Spotify, Ticketmaster, Airbnb, XGBoost, Pandas}
+\begin{zitemize}
+    \item Recommendation system leveraging APIs to select from user's live upcoming favorite concerts and receive personalized Airbnb listings catering to distance \& cost.  
+    \item \textbf{XGBoost} model provides easily explainable \& interpretable feature importance and metrics. 
+    \item \textbf{Context-based Features} to calculate the distance between Airbnbs and selected concert venues. KMeans clustering used for model efficiency for reduction of API calls. Implemented custom loss function, namely Distance was fine-tuned to use $\sqrt[^4]{x}$ to match price and reviews. 
+\end{zitemize}
+
+
+
+
+% NLP
+\subsection{{NLP: Reading Between the Lines — Emotion Classification in Text}}
+\subtext{Python: BERT, GoEmotions Dataset, Reddit Data}
+\begin{zitemize}
+    \item Training based on Google's Emotions dataset classifying text into 27 emotions + Neutral.
+    \item Usage of LLMs to expand upon our dataset via "Synthetic data" that is significantly better to capture better ranges of emotions since annotators cannot agree 74\% of the time. 
+    \item Fine-tuned BERT as a backbone for a highly-interpretable Tri-Tower Transformer that leverages BIO-tagging to show exactly which words in the text led to its prediction of emotion
+\end{zitemize}
+
+% % HUMAN FACTORS
+% \subsection{{Income Disparity Classifier: Leveraging Ethical \& Explainable AI}}
+% \subtext{Python: PyTorch, Pandas, SHAP}
+% \begin{zitemize}
+%     \item AI predictive tool for income prediction and business insights where it is essential the tool is both ethical and interpretable. 
+%     \item SHAP library used to analyze feature importance to explain model predictions. 
+%     \item In-processing bias mitigation (Adversarial Debiasing) to improve model fairness in sensitive features. 
+% \end{zitemize}
+%====================
+% EXPERIENCE B
+%====================
+
+
+%====================
+% EXPERIENCE C
+%====================
+\subsection{{Genetic Algorithms: Custom Multi-Agent Environment + Game}}
+\subtext{Python}
+\begin{zitemize}
+\item Created a custom Multi-Agent environment from scratch.
+\item Each turn of a game, individual Agents choose to move to a square with the goal of either gathering food or fight an enemy (and gain their resources).
+\item Individual Agents have their own weights and stats to determine weighing their decisions.
+\item Env used to model evolution in populations and showcase convergence towards the optimal agent decisions and stats to simulate Natural Selection. 
+\end{zitemize}
+
+
+
+
+\subsection{{Deep Learning Generative AI: Music Genre Transfer}}
+\subtext{Python: ResNet, CycleGAN}
+\begin{zitemize}
+\item User selects a song and a target genre to generate the transferred song in the new domain.
+\item Leveraged CycleGAN's cycle consistency to ensure that a song's identity is preserved. 
+\item ResNet's residual blocks architecture allows high-level features like melody to skip layers, focusing on changing smaller details within a song. 
+\end{zitemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

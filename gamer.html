@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brent Garey | Gamer Portfolio</title>
+    <!-- Dark Academia Theme Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gamer-stats {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+        }
+
+        .stat-value {
+            color: var(--accent-gold);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Adjust hero for gamer page */
+        .gamer-hero {
+            min-height: 60vh;
+            padding-top: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Dynamic Cursor Glow -->
+    <div id="cursor-glow"></div>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="nav-content">
+            <a href="index.html" class="nav-brand">Brent Garey.</a>
+            <div class="nav-links">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#projects" class="nav-link">Architecture</a>
+                <a href="gamer.html" class="nav-link" style="color: var(--text-primary);">eSports</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-container">
+
+        <!-- ================= HERO SECTION ================= -->
+        <section class="section-hero gamer-hero">
+            <div class="hero-content">
+                <span class="mono-text" style="margin-bottom: 1rem;">IGN: kilpy</span>
+                <h1 class="hero-title" id="tw-title" style="min-height: 1.25em;"></h1>
+                <p class="hero-subtitle" id="tw-subtitle" style="min-height: 80px;">
+                </p>
+            </div>
+
+            <div class="hero-visual">
+                <div class="abstract-sphere"></div>
+            </div>
+        </section>
+
+        <!-- ================= GAMES GRID ================= -->
+        <section class="section-projects" style="padding-top: 0; border-top: none;">
+            <div class="project-grid">
+
+                <!-- League of Legends -->
+                <article class="glass-card project-card">
+                    <div class="project-content">
+                        <span class="mono-text text-gold">MOBA</span>
+                        <h3>League of Legends</h3>
+                        <p class="stat-value" style="font-size: 1.1rem; margin-top: 5px; margin-bottom: 20px;">
+                            Diamond I
+                        </p>
+
+                        <div class="gamer-stats">
+                            <div class="stat-row">
+                                <span class="stat-label">IGN</span>
+                                <span class="stat-value">kilpy#brent</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">ADC</span>
+                                <span class="stat-value"
+                                    style="color: var(--text-primary); font-weight: normal; text-align: right;">Ezreal,
+                                    Kai'Sa</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Jungle</span>
+                                <span class="stat-value"
+                                    style="color: var(--text-primary); font-weight: normal; text-align: right;">Viego,
+                                    Kindred</span>
+                            </div>
+                        </div>
+
+                        <div class="project-links" style="margin-top: 20px;">
+                            <a href="https://op.gg/lol/summoners/na/kilpy-brent" target="_blank"
+                                class="github-link">OP.GG Profile ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Rocket League -->
+                <article class="glass-card project-card">
+                    <div class="project-content">
+                        <span class="mono-text text-gold">Sports / Racing</span>
+                        <h3>Rocket League</h3>
+                        <p class="stat-value" style="font-size: 1.1rem; margin-top: 5px; margin-bottom: 20px;">
+                            Champion III <span
+                                style="font-size: 0.8rem; color: var(--text-secondary); font-weight: normal;">(2v2 &
+                                3v3)</span>
+                        </p>
+
+                        <div class="project-links" style="margin-top: 20px;">
+                            <!-- No external link provided -->
+                            <span class="github-link" style="color: var(--text-secondary); border-bottom: none;">In-Game
+                                Verified</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Overwatch -->
+                <article class="glass-card project-card">
+                    <div class="project-content">
+                        <span class="mono-text text-gold">Hero Shooter</span>
+                        <h3>Overwatch</h3>
+                        <p class="stat-value" style="font-size: 1.1rem; margin-top: 5px; margin-bottom: 20px;">
+                            Grandmaster 4200SR
+                        </p>
+
+                        <div class="gamer-stats">
+                            <div class="stat-row">
+                                <span class="stat-label">BattleTag</span>
+                                <span class="stat-value">kilpy#1972</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Support</span>
+                                <span class="stat-value"
+                                    style="color: var(--text-primary); font-weight: normal; text-align: right;">Ana,
+                                    Zenyatta</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Tank</span>
+                                <span class="stat-value"
+                                    style="color: var(--text-primary); font-weight: normal; text-align: right;">Reinhardt</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">DPS</span>
+                                <span class="stat-value"
+                                    style="color: var(--text-primary); font-weight: normal; text-align: right;">Genji,
+                                    Torb</span>
+                            </div>
+                        </div>
+
+                        <div class="project-links" style="margin-top: 20px;">
+                            <a href="https://tracker.gg/overwatch/profile/battlenet/kilpy%231972/overview"
+                                target="_blank" class="github-link">Tracker Network ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Valorant -->
+                <article class="glass-card project-card">
+                    <div class="project-content">
+                        <span class="mono-text text-gold">Tactical Shooter</span>
+                        <h3>Valorant</h3>
+                        <p class="stat-value"
+                            style="font-size: 1.1rem; margin-top: 5px; margin-bottom: 20px; color: #ff4655;">
+                            Ascendant
+                        </p>
+
+                        <div class="gamer-stats">
+                            <div class="stat-row">
+                                <span class="stat-label">Status</span>
+                                <span class="stat-value" style="color: var(--text-secondary);">Inactive</span>
+                            </div>
+                        </div>
+
+                        <div class="project-links" style="margin-top: 20px;">
+                            <!-- Inactive, no link -->
+                            <span class="github-link"
+                                style="color: var(--text-secondary); border-bottom: none;">Previous Season</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Deadlock -->
+                <article class="glass-card project-card">
+                    <div class="project-content">
+                        <span class="mono-text text-gold">MOBA Shooter</span>
+                        <h3>Deadlock</h3>
+                        <p class="stat-value"
+                            style="font-size: 1.1rem; margin-top: 5px; margin-bottom: 20px; color: var(--text-secondary);">
+                            Currently Learning Meta
+                        </p>
+
+                        <div class="project-links" style="margin-top: 20px;">
+                            <span class="github-link"
+                                style="color: var(--text-secondary); border-bottom: none;">Learning Meta</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ================= SINGLE PLAYER / STRATEGY GRID ================= -->
+        <section class="section-skills" style="padding-top: 80px; border-top: 1px solid var(--border-subtle);">
+            <div class="section-heading">
+                <span class="mono-text">Beyond Competitive</span>
+                <h2>Campaigns & Strategy</h2>
+            </div>
+
+            <div class="project-grid">
+
+                <!-- OSRS -->
+                <article class="glass-card project-card">
+                    <div class="project-content">
+                        <span class="mono-text text-gold">MMORPG</span>
+                        <h3>Old School RuneScape</h3>
+                        <p>
+                            Relentless grind, economy trading, and deep game knowledge.
+                            <br><br>
+                            Working on 99 Slayer. ~2000 total level account.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Total War / EU5 -->
+                <article class="glass-card project-card">
+                    <div class="project-content">
+                        <span class="mono-text text-gold">Grand Strategy</span>
+                        <h3>Total War & Europa Universalis 5</h3>
+                        <p>
+                            Macro-level resource management, historical immersion, and tactical army movement.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Mount & Blade -->
+                <article class="glass-card project-card">
+                    <div class="project-content">
+                        <span class="mono-text text-gold">Action RPG / Sim</span>
+                        <h3>Mount & Blade</h3>
+                        <p>
+                            Large-scale battlefield commands and reflex-based directional combat.
+                            <br><br>
+                            <span class="mono-text text-gold" style="font-size: 0.75rem;">Regiment: 3eVolt</span>
+                        </p>
+                    </div>
+                </article>
+
+                <!-- osu! -->
+                <article class="glass-card project-card">
+                    <div class="project-content">
+                        <span class="mono-text text-gold">Rhythm</span>
+                        <h3>osu!</h3>
+                        <p>
+                            Cursor precision, reading complex patterns, and raw reaction speed.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="app-container footer-content">
+            <p class="mono-text">b.elbridgegarey@gmail.com</p>
+            <p class="mono-text">&copy; 2026 Brent Garey. Built with intent.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // --- Typewriter Effect ---
+        async function typeText(element, text, speed = 30) {
+            element.innerHTML = '';
+            const cursor = document.createElement('span');
+            cursor.className = 'tw-cursor';
+            element.appendChild(cursor);
+
+            for (let i = 0; i < text.length; i++) {
+                if (text.charAt(i) === '\n') {
+                    const br = document.createElement('br');
+                    element.insertBefore(br, cursor);
+                } else {
+                    const charNode = document.createTextNode(text.charAt(i));
+                    element.insertBefore(charNode, cursor);
+                }
+                // slight randomness for realistic typing
+                await new Promise(r => setTimeout(r, speed + Math.random() * 20));
+            }
+            element.removeChild(cursor);
+        }
+
+        async function runTypewriter() {
+            const titleEl = document.getElementById('tw-title');
+            const subtitleEl = document.getElementById('tw-subtitle');
+
+            if (titleEl && subtitleEl) {
+                // Type the title first
+                const titleText = "My goal is to learn games enough for me to say that I know them.";
+                await typeText(titleEl, titleText, 45);
+
+                // Clear the title cursor visually once done
+                const cursors = titleEl.getElementsByClassName('tw-cursor');
+                if (cursors.length > 0) {
+                    cursors[0].style.display = 'none';
+                }
+
+                // Pause before typing subtitle
+                await new Promise(r => setTimeout(r, 400));
+
+                // Type the subtitle
+                const subtitleText = "I tend to love high-mobility characters that benefit from ability resets on elims.";
+                await typeText(subtitleEl, subtitleText, 15);
+
+                // Add persistent cursor to the end of subtitle
+                const finalCursor = document.createElement('span');
+                finalCursor.className = 'tw-cursor';
+                subtitleEl.appendChild(finalCursor);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', runTypewriter);
+
+        const cursorGlow = document.getElementById('cursor-glow');
+
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+
+            // Move the glow to follow the cursor exactly
+            cursorGlow.style.left = `${x}px`;
+            cursorGlow.style.top = `${y}px`;
+        });
+    </script>
+</body>
+
+</html>
