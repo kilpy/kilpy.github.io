@@ -36,7 +36,7 @@
                         class="text-gold"></span></h1>
                 <p class="hero-subtitle" id="tw-subtitle" style="min-height: 5em; margin-bottom: 1rem;"></p>
                 <div class="hero-actions" id="hero-actions"
-                    style="opacity: 0; transform: translateY(10px); transition: opacity 0s, transform 0s;">
+                    style="opacity: 0; transform: translateY(10px); transition: opacity 1s ease, transform 1s ease;">
                     <a href="#projects" class="btn btn-primary">Projects</a>
                     <a href="Resume_Brent_Garey.pdf" target="_blank" class="btn btn-outline">Resume</a>
                     <a href="gamer.html" class="btn btn-outline">Games</a>
@@ -481,7 +481,7 @@
             for (let i = 0; i < text.length; i++) {
                 if (text.charAt(i) === '|') {
                     // Stutter explicit pause
-                    await new Promise(r => setTimeout(r, 150));
+                    await new Promise(r => setTimeout(r, 650));
                     continue;
                 }
                 if (text.charAt(i) === '\n') {
@@ -504,28 +504,28 @@
             const subtitleEl = document.getElementById('tw-subtitle');
             const actionsEl = document.getElementById('hero-actions');
 
-            await typeText(initEl, "hi!| i'm brent", 10);
-            await new Promise(r => setTimeout(r, 50));
+            await typeText(initEl, "hi!| i'm brent", 26);
+            await new Promise(r => setTimeout(r, 100));
 
-            await typeText(title1El, "this is ", 15);
-            await typeText(title2El, " me", 20);
+            await typeText(title1El, "this is ", 35);
+            await typeText(title2El, " me", 60);
 
             // Ensure visual pause after title is done typing
             const titleCursor = document.createElement('span');
             titleCursor.className = 'tw-cursor';
             title2El.appendChild(titleCursor);
-            await new Promise(r => setTimeout(r, 100));
+            await new Promise(r => setTimeout(r, 400));
             title2El.removeChild(titleCursor);
 
             const subtitleText = "I'm currently pursuing a Master's in Artificial Intelligence at Northeastern University.\n\nI'm passionate about eSports, EDM, RecSys, and creating interpretable or compute-efficient AI systems.";
-            await typeText(subtitleEl, subtitleText, 5);
+            await typeText(subtitleEl, subtitleText, 25);
 
             // Add persistent cursor at the end of subtitle
             const finalCursor = document.createElement('span');
             finalCursor.className = 'tw-cursor';
             subtitleEl.appendChild(finalCursor);
 
-            await new Promise(r => setTimeout(r, 50));
+            await new Promise(r => setTimeout(r, 200));
 
             actionsEl.style.opacity = '1';
             actionsEl.style.transform = 'translateY(0)';

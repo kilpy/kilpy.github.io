@@ -316,7 +316,7 @@
             if (titleEl && subtitleEl) {
                 // Type the title first
                 const titleText = "My goal is to learn strategy for the love of the game: to know ball.";
-                await typeText(titleEl, titleText, 15);
+                await typeText(titleEl, titleText, 45);
 
                 // Clear the title cursor visually once done
                 const cursors = titleEl.getElementsByClassName('tw-cursor');
@@ -325,11 +325,11 @@
                 }
 
                 // Pause before typing subtitle
-                await new Promise(r => setTimeout(r, 100));
+                await new Promise(r => setTimeout(r, 400));
 
                 // Type the subtitle
                 const subtitleText = "I tend to love high-mobility characters that can be at the right place at the right time.";
-                await typeText(subtitleEl, subtitleText, 5);
+                await typeText(subtitleEl, subtitleText, 15);
 
                 // Add persistent cursor to the end of subtitle
                 const finalCursor = document.createElement('span');
