@@ -16,7 +16,7 @@
     <!-- Navigation Header -->
     <header>
         <div class="nav-content">
-            <a href="index.html" class="nav-brand">Brent Garey.</a>
+            <a href="index.html" class="nav-brand">Brent Garey</a>
             <div class="nav-links">
 
                 <a href="#skills" class="nav-link">Skills</a>
@@ -38,7 +38,7 @@
                 <div class="hero-actions" id="hero-actions"
                     style="opacity: 0; transform: translateY(10px); transition: opacity 1s ease, transform 1s ease;">
                     <a href="#projects" class="btn btn-primary">Projects</a>
-                    <a href="Resume_Brent_Garey.pdf" target="_blank" class="btn btn-outline">Resume</a>
+                    <a href="Brent%20Garey%20Resume.pdf" target="_blank" class="btn btn-outline">Resume</a>
                     <a href="gamer.html" class="btn btn-outline">Games</a>
                 </div>
             </div>
@@ -436,7 +436,7 @@
     <footer>
         <div class="app-container footer-content">
             <p class="mono-text">b.elbridgegarey@gmail.com</p>
-            <p class="mono-text">&copy; 2026 Brent Garey. Built with intent.</p>
+            <p class="mono-text">&copy; 2026 Brent Garey</p>
         </div>
     </footer>
 
@@ -481,7 +481,7 @@
             for (let i = 0; i < text.length; i++) {
                 if (text.charAt(i) === '|') {
                     // Stutter explicit pause
-                    await new Promise(r => setTimeout(r, 250));
+                    await new Promise(r => setTimeout(r, 50));
                     continue;
                 }
                 if (text.charAt(i) === '\n') {
@@ -504,8 +504,8 @@
             const subtitleEl = document.getElementById('tw-subtitle');
             const actionsEl = document.getElementById('hero-actions');
 
-            await typeText(initEl, "hi!| i'm brent", 26);
-            await new Promise(r => setTimeout(r, 100));
+            await typeText(initEl, "hi!| i'm brent", 18);
+            await new Promise(r => setTimeout(r, 50));
 
             await typeText(title1El, "this is ", 35);
             await typeText(title2El, " me", 60);
@@ -517,8 +517,8 @@
             await new Promise(r => setTimeout(r, 400));
             title2El.removeChild(titleCursor);
 
-            const subtitleText = "I'm currently pursuing a Master's in Artificial Intelligence at Northeastern University.\n\nI'm passionate about eSports, EDM, RecSys, and creating interpretable or compute-efficient AI systems.";
-            await typeText(subtitleEl, subtitleText, 25);
+            const subtitleText = "I'm a student of AI with interests in Gaming, EDM, RecSys, and interpretability. \n\n My goal is to dispel the black box around neural networks by leveraging fundamental mechanics within the problem at hand. \n\n Afterall, if I can't explain it, \n how can I expect others to understand it?";
+            await typeText(subtitleEl, subtitleText, 10);
 
             // Add persistent cursor at the end of subtitle
             const finalCursor = document.createElement('span');

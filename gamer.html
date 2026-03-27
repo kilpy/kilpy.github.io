@@ -37,6 +37,55 @@
             min-height: 60vh;
             padding-top: 150px;
         }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-gold);
+            box-shadow: 0 0 20px var(--accent-gold-glow);
+            object-fit: cover;
+        }
+
+        .IGN-label {
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 0 !important;
+        }
+
+        .god-tier-name {
+            font-size: 3.5rem;
+            text-transform: lowercase;
+            font-family: var(--font-serif);
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(255, 70, 85, 0.6);
+            letter-spacing: 2px;
+            animation: god-pulse 3s infinite alternate;
+            display: inline-block;
+        }
+
+        @keyframes god-pulse {
+            0% {
+                text-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(255, 70, 85, 0.6);
+                transform: scale(1);
+            }
+
+            100% {
+                text-shadow: 0 0 20px rgba(212, 175, 55, 1), 0 0 35px rgba(255, 70, 85, 1), 0 0 50px rgba(138, 43, 226, 0.8);
+                transform: scale(1.05);
+            }
+        }
     </style>
 </head>
 
@@ -62,8 +111,13 @@
         <!-- ================= HERO SECTION ================= -->
         <section class="section-hero gamer-hero">
             <div class="hero-content">
-                <span class="mono-text" style="margin-bottom: 1rem;">IGN: kilpy</span>
-                <h1 class="hero-title" id="tw-title" style="min-height: 1.25em;"></h1>
+                <div class="profile-container">
+                    <span class="mono-text IGN-label">IGN: <span class="god-tier-name">kilpy</span></span>
+                    <img src="profile.png" alt="Mighty but cute kilpy" class="profile-pic">
+                </div>
+                <h1 id="tw-title"
+                    style="min-height: 4.2em; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.3; margin: 1.5rem 0;">
+                </h1>
                 <p class="hero-subtitle" id="tw-subtitle" style="min-height: 80px;">
                 </p>
             </div>
@@ -83,7 +137,7 @@
                         <span class="mono-text text-gold">MOBA</span>
                         <h3>League of Legends</h3>
                         <p class="stat-value" style="font-size: 1.1rem; margin-top: 5px; margin-bottom: 20px;">
-                            Diamond I
+                            Peak: Diamond I
                         </p>
 
                         <div class="gamer-stats">
@@ -178,7 +232,7 @@
                         <h3>Valorant</h3>
                         <p class="stat-value"
                             style="font-size: 1.1rem; margin-top: 5px; margin-bottom: 20px; color: #ff4655;">
-                            Ascendant
+                            Diamond I
                         </p>
 
                         <div class="gamer-stats">
@@ -192,23 +246,6 @@
                             <!-- Inactive, no link -->
                             <span class="github-link"
                                 style="color: var(--text-secondary); border-bottom: none;">Previous Season</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Deadlock -->
-                <article class="glass-card project-card">
-                    <div class="project-content">
-                        <span class="mono-text text-gold">MOBA Shooter</span>
-                        <h3>Deadlock</h3>
-                        <p class="stat-value"
-                            style="font-size: 1.1rem; margin-top: 5px; margin-bottom: 20px; color: var(--text-secondary);">
-                            Currently Learning Meta
-                        </p>
-
-                        <div class="project-links" style="margin-top: 20px;">
-                            <span class="github-link"
-                                style="color: var(--text-secondary); border-bottom: none;">Learning Meta</span>
                         </div>
                     </div>
                 </article>
@@ -296,6 +333,11 @@
             element.appendChild(cursor);
 
             for (let i = 0; i < text.length; i++) {
+                if (text.charAt(i) === '|') {
+                    // Stutter explicit pause
+                    await new Promise(r => setTimeout(r, 800));
+                    continue;
+                }
                 if (text.charAt(i) === '\n') {
                     const br = document.createElement('br');
                     element.insertBefore(br, cursor);
@@ -315,7 +357,7 @@
 
             if (titleEl && subtitleEl) {
                 // Type the title first
-                const titleText = "My goal is to learn strategy for the love of the game: to know ball.";
+                const titleText = "My goal is to learn strategy| \nfor the love of the game:| \nto know ball.";
                 await typeText(titleEl, titleText, 45);
 
                 // Clear the title cursor visually once done
@@ -328,7 +370,7 @@
                 await new Promise(r => setTimeout(r, 400));
 
                 // Type the subtitle
-                const subtitleText = "I tend to love high-mobility characters that benefit from ability resets on elims.";
+                const subtitleText = "I tend to love high-mobility characters that can be at the right place at the right time, deciding the fight.";
                 await typeText(subtitleEl, subtitleText, 15);
 
                 // Add persistent cursor to the end of subtitle
