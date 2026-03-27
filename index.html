@@ -19,8 +19,8 @@
             <a href="index.html" class="nav-brand">Brent Garey.</a>
             <div class="nav-links">
 
-                <a href="#projects" class="nav-link">Projects</a>
                 <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
                 <a href="gamer.html" class="nav-link">Games</a>
             </div>
         </div>
@@ -49,10 +49,71 @@
             </div>
         </section>
 
+        <!-- ================= ABOUT & SKILLS SECTION ================= -->
+        <section id="skills" class="section-skills">
+            <div class="section-heading">
+                <span class="mono-text">01. Background</span>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Education Card -->
+                <div class="glass-card education-card">
+                    <h3>Education</h3>
+                    <div class="edu-item">
+                        <span class="mono-text text-gold">Dec 2026</span>
+                        <h4>Master of Science, Artificial Intelligence</h4>
+                        <p>Northeastern University, Khoury College of Computer Sciences</p>
+                        <p class="subtext">Concentration: Machine Learning </p>
+                        <p class="subtext">Current Teaching Assistant under <a
+                                href="https://rajagopalvenkat.com/teaching/AI/index.html" target="_blank"
+                                style="color: var(--accent-gold); text-decoration: underline;">Professor Raj Venkat
+                                (CS4100: AI)</a>
+                        </p>
+                    </div>
+                    <div class="edu-item">
+                        <span class="mono-text text-gold"></span>
+                        <h4>Bachelor of Science, Computer Science</h4>
+                        <p>University of Massachusetts Lowell</p>
+                    </div>
+                </div>
+
+                <!-- Tech Stack Card -->
+                <div class="glass-card tech-card">
+                    <h3>Technical Arsenal</h3>
+                    <div class="tech-group">
+                        <span class="mono-text">Languages</span>
+                        <div class="tech-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">C/C++</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <span class="mono-text">Libraries & Frameworks</span>
+                        <div class="tech-tags">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">HuggingFace</span>
+                            <span class="tag">LangChain</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">NumPy</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <span class="mono-text">Specializations</span>
+                        <p class="specialization-text">
+                            Deep Learning, NLP, Transformers, Multi-Agent RL, Recommendation Systems, RAG Architectures.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
         <!-- ================= PROJECTS GRID ================= -->
         <section id="projects" class="section-projects">
             <div class="section-heading">
-                <span class="mono-text">01. Applied Architectures</span>
+                <span class="mono-text">02. Applied Architectures</span>
                 <h2>Highlighted Research & Models</h2>
             </div>
 
@@ -149,67 +210,6 @@
                     </div>
                 </article>
 
-            </div>
-        </section>
-
-
-
-        <!-- ================= ABOUT & SKILLS SECTION ================= -->
-        <section id="skills" class="section-skills">
-            <div class="section-heading">
-                <span class="mono-text">02. Background</span>
-            </div>
-
-            <div class="skills-grid">
-                <!-- Education Card -->
-                <div class="glass-card education-card">
-                    <h3>Education</h3>
-                    <div class="edu-item">
-                        <span class="mono-text text-gold">Dec 2026</span>
-                        <h4>Master of Science, Artificial Intelligence</h4>
-                        <p>Northeastern University, Khoury College of Computer Sciences</p>
-                        <p class="subtext">Concentration: Machine Learning </p>
-                        <p class="subtext">Current Teaching Assistant under <a
-                                href="https://rajagopalvenkat.com/teaching/AI/index.html" target="_blank"
-                                style="color: var(--accent-gold); text-decoration: underline;">Professor Raj Venkat
-                                (CS4100: AI)</a>
-                        </p>
-                    </div>
-                    <div class="edu-item">
-                        <span class="mono-text text-gold"></span>
-                        <h4>Bachelor of Science, Computer Science</h4>
-                        <p>University of Massachusetts Lowell</p>
-                    </div>
-                </div>
-
-                <!-- Tech Stack Card -->
-                <div class="glass-card tech-card">
-                    <h3>Technical Arsenal</h3>
-                    <div class="tech-group">
-                        <span class="mono-text">Languages</span>
-                        <div class="tech-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">C/C++</span>
-                            <span class="tag">SQL</span>
-                        </div>
-                    </div>
-                    <div class="tech-group">
-                        <span class="mono-text">Libraries & Frameworks</span>
-                        <div class="tech-tags">
-                            <span class="tag">PyTorch</span>
-                            <span class="tag">HuggingFace</span>
-                            <span class="tag">LangChain</span>
-                            <span class="tag">Pandas</span>
-                            <span class="tag">NumPy</span>
-                        </div>
-                    </div>
-                    <div class="tech-group">
-                        <span class="mono-text">Specializations</span>
-                        <p class="specialization-text">
-                            Deep Learning, NLP, Transformers, Multi-Agent RL, Recommendation Systems, RAG Architectures.
-                        </p>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -481,7 +481,7 @@
             for (let i = 0; i < text.length; i++) {
                 if (text.charAt(i) === '|') {
                     // Stutter explicit pause
-                    await new Promise(r => setTimeout(r, 650));
+                    await new Promise(r => setTimeout(r, 250));
                     continue;
                 }
                 if (text.charAt(i) === '\n') {
@@ -492,7 +492,7 @@
                     element.insertBefore(charNode, cursor);
                 }
                 // slight randomness for realistic typing, reduced for a smoother feel
-                await new Promise(r => setTimeout(r, speed + Math.random() * 10));
+                await new Promise(r => setTimeout(r, speed + Math.random() * 5));
             }
             element.removeChild(cursor);
         }
