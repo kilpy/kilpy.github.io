@@ -328,7 +328,7 @@
                 await new Promise(r => setTimeout(r, 400));
 
                 // Type the subtitle
-                const subtitleText = "I tend to love high-mobility characters that can be at the right place at the right time.";
+                const subtitleText = "I tend to love high-mobility characters that benefit from ability resets on elims.";
                 await typeText(subtitleEl, subtitleText, 15);
 
                 // Add persistent cursor to the end of subtitle
@@ -338,7 +338,7 @@
             }
         }
 
-        runTypewriter();
+        window.addEventListener('DOMContentLoaded', runTypewriter);
 
         const cursorGlow = document.getElementById('cursor-glow');
 
