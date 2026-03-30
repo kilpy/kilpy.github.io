@@ -257,9 +257,10 @@
                 <div class="modal-text-section" style="margin-top: 2rem;">
                     <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">Convergernce </h3>
                     <p>
-                        This project taught me a lot about creating a game, and the importance of good visuals for good,
-                        interpretable results to understand agent behaviors. This got me comfortable with how genetic
-                        algorithms converge.
+                        This project taught me a lot about creating a game and the hassle of GOOD balancing
+                        techniques and mechanics. It also taught me the importance of good visuals for good,
+                        interpretable results to understand agent behaviors so that we can make BETTER balance
+                        decisions. There really is a lifecycle to this stuff, huh?
                     </p>
                 </div>
             </div>
@@ -275,11 +276,12 @@
 
             <div class="modal-body">
                 <p>
-                    Solving the Navier-Stokes equations for Computational Fluid Dynamics (CFD) using traditional mesh
-                    generation is notoriously computationally expensive, scaling extremely poorly with required
-                    resolution. This project introduces a Transformer-based surrogate model designed for next-frame and
+                    Computational Fluid Dynamics (CFD) using traditional methods is notoriously computationally
+                    expensive, scaling extremely project-modal-overlay
+                    This project introduces a Transformer-based surrogate model designed for next-frame and
                     autoregressive forecasting of turbulent fluid properties (velocities u, v and pressure p) using
-                    multivariate regression in drastically lower dimensional representations.
+                    multivariate regression in drastically lower dimensional representations using MLA attention, with
+                    the Reynolds number folded in for parameter efficiency.
                 </p>
 
                 <div class="modal-media-grid" style="margin-bottom: 2rem;">
@@ -298,16 +300,18 @@
                     style="margin-top: 2rem; border-top: 1px solid var(--border-subtle); padding-top: 2rem;">
                     <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">Architectural Highlights (Author Notes)</h3>
                     <ul style="margin-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
-                        <li><strong>Positional Encoding Intervention:</strong> Expand on why standard APE/ALiBi failed
-                            physically, and detail your Reynolds-Positional-Representation (ReyPR) architecture.</li>
-                        <li><strong>Parameter Efficiency:</strong> Discuss how projecting out of the decoder space
-                            triggered a parameter explosion (7.8M parameters), and how you mitigated this using a
-                            Low-Rank Approximation (LRA) bottleneck rather than lossy mean-pooling.</li>
-                        <li><strong>Performance Metrics:</strong> Highlight the Pareto-Optimality of the model,
-                            specifically how it balanced Mean Squared Error against variance stability over baselines.
+                        <li><strong>Positional Encoding Intervention:</strong> Standard APE/ALiBi failed, so one of our
+                            group members, Chris, gave a talk on Positional Encoding at NeurIPS, and he came up with
+                            ReyPR.</li>
+                        <li><strong>Parameter Efficiency:</strong> Utilized MLA (featured by deepseek) to outperform
+                            traditional lossy mean-pooling by working in a much lower dimensional representation.</li>
+                        <li><strong>Performance Metrics:</strong> Our baseline model involved a simple MLP, which
+                            featured 7.6 million parameters and held a loss of 0.07.
+                            Our model, on the other hand, featured 2.3 million parameters and held a loss of 0.007. This
+                            is a 3x reduction in parameters and a 10x reduction in loss.
                         </li>
-                        <li><strong>Physics-Informed Bounds:</strong> Add a note on the custom loss function and how it
-                            forced the network to respect fluid flow mechanics (Navier-Stokes).</li>
+                        <li><strong>Physics-Informed Bounds:</strong> Attempts at a custom loss function to enforce
+                            fluid flow mechanics (Navier-Stokes).</li>
                     </ul>
                 </div>
 
@@ -353,15 +357,14 @@
                         <li><strong>The Tri-Tower Cognitive Pipeline:</strong> Detail how the model mimics human
                             pragmatic inference by splitting into three modules: a Span-Level Lexical Tower, a Global
                             Context Tower, and a Dictionary Definition Tower using contrastive loss.</li>
-                        <li><strong>Failure of Baselines on Pragmatics:</strong> Note how standard CNN/BERT models fail
-                            on sarcasm/irony. (e.g., 63% of ground-truth emotion examples were wrongly predicted as
-                            "None" by CNN baselines due to strict sequence matching).</li>
-                        <li><strong>LLM Dataset Augmentation:</strong> Highlight the use of LLMs to generate span-level
-                            BIO tags isolating explicit tokens (e.g., "OMG"), allowing the custom transformer to ground
-                            emotional labels to precise lexical cues instead of entire vague sentences.</li>
-                        <li><strong>Explainability & Precision:</strong> Emphasize how this approach moves beyond
-                            Black-Box BERT performance (which only outputs a final label) to highly-interpretable
-                            span-based predictions mapping directly to dictionary definitions.</li>
+                        <li><strong>Synthetic Data Generation:</strong> Use of LLMs as annotators to mimic human
+                            pragmatic inference and generate BIO tags for each token, circumnavigating the need for
+                            expensive human annotation, due to the claim that the goemotions dataset states, only 13% of
+                            the time did all annotators agree, thereby acting as a good proxy for human annotation.
+                        </li>
+                        <li><strong>Explainability & Precision:</strong> The use of BIO tagging generated for each token
+                            allows for a more interpretable model compared to black box models like BERT since we can
+                            pinpoint the exact tokens that contribute to the model's prediction.</li>
                     </ul>
                 </div>
             </div>
@@ -412,7 +415,7 @@
                     <p>
                         Current property scores rely on textual reviews and standard API features (price, beds, star
                         rating).
-                        However, text reviews often fail to capture the <em>aesthetic feel</em> of a spaceâ€”which is
+                        However, text reviews often fail to capture the <em>aesthetic feel</em> of a space which is
                         crucial when pairing it with a specific music genre (e.g., booking an industrial loft for an
                         underground techno show, vs. a cozy cabin for an indie folk concert).
                     </p>
@@ -516,7 +519,7 @@
             await new Promise(r => setTimeout(r, 400));
             title2El.removeChild(titleCursor);
 
-            const subtitleText = "I'm a Master's student in AI with interests in Gaming, EDM, RecSys, and interpretability. \n\n My aim is to demystify the black box of neural networks by leveraging fundamental mechanics to exploit the patterns that naturally exist within the world.\n\n I also enjoy my current role as a TA, sparing others the pain of having to learn things the hard way: through loss. \n\n Im passionate about leetcoding!!! (i will ask for topics to study before technicals :) ) \n\n Scroll for more info!";
+            const subtitleText = "I'm a Master's student in AI with interests in Gaming, EDM, RecSys, and interpretability. \n\n My skillset is in tackling the black box problem of neural networks being uninterpretable by leveraging fundamental mechanics to exploit the patterns that naturally exist within the world.\n\n I also enjoy my current role as a TA, sparing others the pain of having to learn things the hard way: through loss. \n\n Im passionate about leetcoding!!! (i will ask for topics to study before technicals :) ) \n\n Scroll for more info!";
             await typeText(subtitleEl, subtitleText, 10);
 
             // Add persistent cursor at the end of subtitle
