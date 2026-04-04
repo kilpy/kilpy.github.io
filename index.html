@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -519,9 +519,9 @@
             await new Promise(r => setTimeout(r, 400));
             title2El.removeChild(titleCursor);
 
-            const subtitlePart1 = "I'm a Master's student in AI with interests in Gaming, EDM, RecSys, and interpretability. \n\n Neural Nets can be seen as a black box, but i love visualizing the story behind the answer. \n \n I focus on leveraging the fundamental mechanics of the world to understand, exploit, and recreate the patterns and behaviors that define us and our world.\n\n aside from that, i genuinely enjoy my current role as a TA, sparing others the pain of having to learn things the hard way\n—\n";
+            const subtitlePart1 = "I'm a Master's student in AI with interests in Gaming, EDM, RecSys, and interpretability. \n\n Neural Nets and Agents can be seen as a black box, but i love visualizing the story behind the answer. \n \n I focus on leveraging the fundamental mechanics of the world to understand, exploit, and recreate the patterns and behaviors that define us and our world.\n\n aside from that, i genuinely enjoy my current role as a TA, sparing others the pain of having to learn things the hard way—";
             const subtitlePart2 = "through loss.";
-            const subtitlePart3 = " \n\n i love leetcode!!! (i will ask for topics to study before technicals :) ) \n\n Scroll for more info!";
+            const subtitlePart3 = "\n\n\n i love leetcode!!! (i will ask for topics to study before technicals :) ) \n\n Scroll for more info!";
 
             const span1 = document.createElement('span');
             subtitleEl.appendChild(span1);
@@ -532,7 +532,11 @@
             span2.style.fontStyle = "italic";
             span2.style.fontSize = "1.4rem";
             span2.style.color = "var(--accent-gold)";
+            span2.style.display = "block";
+            span2.style.textAlign = "right";
+            span2.style.marginTop = "0.5rem";
             subtitleEl.appendChild(span2);
+            await new Promise(r => setTimeout(r, 400));
             await typeText(span2, subtitlePart2, 40);
 
             const span3 = document.createElement('span');
